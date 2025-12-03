@@ -1,0 +1,5 @@
+deepeval
+openai
+requests
+chardet
+python-dotenv
