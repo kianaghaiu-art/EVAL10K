@@ -110,24 +110,30 @@ This applies only to Math, Physics, and Chemistry.
 
 
 ## Expected Output
-Running the script prints:
-Overall accuracy
-Per-subject accuracy
-Per-subtopic accuracy
-Model error patterns
 
-Example:
+Running the script prints:
+
+- Overall accuracy  
+- Per-subject accuracy  
+- Per-subtopic accuracy  
+  
+**Example Output:** 
 
 Overall Accuracy: 85.76%
-
 Accuracy by Topic:
- • Math: 68.35%
- • Chemistry: 83.97%
- • Biology: 88.98%
- ...
+• Math: 68.35%
+• Chemistry: 83.97%
+• Biology: 88.98%
+• Environmental Science: 89.99%
+• Psychology: 94.90%
+• Physics: 65.20%
+• Anatomy: 96.94%
+• Statistics: 95.10%
+• US History: 98.33%
+
 Detailed tables and plots are available in:
-results/model_results/
-paper/figures/
+- results/model_results/
+- paper/figures/
 
 ## Citing Eval10K
 If you use Eval10K in academic work:
