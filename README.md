@@ -12,7 +12,7 @@ This repository includes:
 
 ---
 
-## 📘 Overview
+## Overview
 
 Eval10K spans **nine academic subjects**:
 - Mathematics  
@@ -38,7 +38,7 @@ The benchmark supports:
 
 
 
-## 📊 Results Summary
+## Results Summary
 
 Eval10K was used to evaluate several major LLMs, including:
 
