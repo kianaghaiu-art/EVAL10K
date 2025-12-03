@@ -64,6 +64,8 @@ Full tables, figures, and subtopic breakdowns are provided in the paper and `pap
 ---
 
 ## Repository Structure
+
+```
 EVAL10K/
 │
 ├── data/
@@ -82,6 +84,8 @@ EVAL10K/
 ├── requirements.txt             # Python dependencies
 │
 └── README.md
+```
+
 
 
 ## Installation
