@@ -63,6 +63,22 @@ Full tables, figures, and subtopic breakdowns are provided in the paper and `pap
 
 ---
 
+## 📊 Expanded Leaderboard: Accuracy & Ranking Across Key Subjects
+
+| Model            | Overall (%) | Math (%) | Physics (%) | Chemistry (%) | Rank (Overall) | Rank (Math) | Rank (Physics) | Rank (Chemistry) |
+|------------------|-------------|----------|-------------|----------------|----------------|-------------|-----------------|------------------|
+| **GPT-5**            | **90.76**    | 84.54   | 85.29      | **94.03**       | 1              | 2           | 3 (tie)         | 1                |
+| **GPT-4o**           | **87.99**    | 76.17   | 86.80      | 90.05          | 2              | 4           | 2               | 2                |
+| **Gemini Flash**     | **87.58**    | 84.01   | **87.65**  | 89.76          | 3              | 3           | 1               | 3                |
+| **Gemini Pro**       | 87.36        | **92.58** | 85.29      | 80.61          | 4              | 1           | 3 (tie)         | 6                |
+| **GPT-4.1**          | 85.76        | 68.35   | 65.20      | 83.97          | 5              | 6           | 7               | 5                |
+| **GPT-4o mini**      | 85.20        | 63.61   | 62.25      | 84.87          | 6              | 8           | 8               | 4                |
+| **Grok 4.1**         | 75.11        | 70.08   | 76.50      | 74.17          | 7              | 5           | 5               | 7                |
+| **Grok 4**           | 71.84        | 66.06   | 63.25      | 68.97          | 8              | 7           | 6               | 8                |
+| **GPT-3.5 Turbo**    | 52.99        | 23.92   | 26.96      | 39.91          | 9              | 9           | 9               | 9                |
+
+---
+
 ## Repository Structure
 
 ```
@@ -86,7 +102,7 @@ EVAL10K/
 └── README.md
 ```
 
-
+---
 
 ## Installation
 
@@ -98,6 +114,7 @@ pip install -r requirements.txt
 
 This will install all Python packages needed to run the Eval10K benchmark, including model wrappers and utility tools.
 
+---
 
 ## Running Evaluations
 
@@ -115,6 +132,7 @@ python src/evaluate.py \
     --dataset data/eval10k.csv
 ```
 
+---
 
 ## Evaluating with Chain-of-Thought (Math, Physics, Chemistry)
 
@@ -130,6 +148,7 @@ This applies only to the following subjects:
 - **Physics**
 - **Chemistry**
 
+---
 
 ## Optional Arguments
 
@@ -146,7 +165,7 @@ You can combine flags as needed. Example:
 python src/evaluate.py --model gpt-4o --dataset data/eval10k.csv --topics "Math,Physics" --n_samples 300
 ```
 
-
+---
 
 ## Expected Output
 
@@ -155,7 +174,9 @@ Running the script prints:
 - Overall accuracy  
 - Per-subject accuracy  
 - Per-subtopic accuracy  
-  
+
+---
+
 **Example Output:** 
 
 Overall Accuracy: 85.76%
@@ -174,6 +195,8 @@ Accuracy by Topic:
 Detailed tables and plots are available in:
 - results/model_results/
 - paper/figures/
+
+---
 
 ## Citing Eval10K
 
