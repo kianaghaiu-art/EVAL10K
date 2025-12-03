@@ -96,7 +96,9 @@ This will install Python packages needed for running the benchmark, including mo
 
 ## Running Evaluations
 The main evaluation script is located in:
+'''
 src/evaluate.py
+'''
 
 To run an evaluation on a model (example: GPT-4o):
 python src/evaluate.py \
