@@ -83,26 +83,31 @@ EVAL10K/
 │
 └── README.md
 
+
 ## Installation
 To run the evaluation scripts, first install the required dependencies:
 pip install -r requirements.txt
+
 This will install Python packages needed for running the benchmark, including model wrappers and utility tools.
 
 ## Running Evaluations
 The main evaluation script is located in:
 src/evaluate.py
-To run an evaluation on a model (example uses GPT-4o):
+
+To run an evaluation on a model (example: GPT-4o):
 python src/evaluate.py \
     --model gpt-4o \
     --dataset data/eval10k.csv
+
 ## Evaluating with Chain-of-Thought (Math, Physics, Chemistry)
 For reasoning-heavy subjects, Eval10K automatically adds chain-of-thought prompting:
-"Think through the problem step by step and explain your reasoning before selecting your final answer."
-This applies only to Math, Physics, Chemistry.
+“Think through the problem step by step and explain your reasoning before selecting your final answer.”
+This applies only to Math, Physics, and Chemistry.
 
 ## Optional arguments
---topics "Math,Chemistry"       # Evaluate specific subjects only
---n_samples 500                 # Limit evaluation to first 500 questions
+--topics "Math,Chemistry"     # Evaluate only selected subjects
+--n_samples 500               # Limit evaluation to first 500 questions
+
 
 ## Expected Output
 Running the script prints:
@@ -110,7 +115,9 @@ Overall accuracy
 Per-subject accuracy
 Per-subtopic accuracy
 Model error patterns
+
 Example:
+
 Overall Accuracy: 85.76%
 
 Accuracy by Topic:
