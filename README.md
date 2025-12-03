@@ -63,7 +63,76 @@ Full tables, figures, and subtopic breakdowns are provided in the paper and `pap
 
 ---
 
+## Repository Structure
+EVAL10K/
+│
+├── data/
+│   └── eval10k.csv              # Full dataset (10,278 questions)
+│
+├── src/
+│   └── evaluate.py              # Main evaluation script
+│
+├── paper/
+│   ├── eval10k.tex              # LaTeX source of research paper
+│   └── figures/                 # All plots and tables
+│
+├── results/
+│   └── model_results/           # Accuracy summaries for all evaluated models
+│
+├── requirements.txt             # Python dependencies
+│
+└── README.md
 
+## Installation
+To run the evaluation scripts, first install the required dependencies:
+pip install -r requirements.txt
+This will install Python packages needed for running the benchmark, including model wrappers and utility tools.
+
+## Running Evaluations
+The main evaluation script is located in:
+src/evaluate.py
+To run an evaluation on a model (example uses GPT-4o):
+python src/evaluate.py \
+    --model gpt-4o \
+    --dataset data/eval10k.csv
+## Evaluating with Chain-of-Thought (Math, Physics, Chemistry)
+For reasoning-heavy subjects, Eval10K automatically adds chain-of-thought prompting:
+"Think through the problem step by step and explain your reasoning before selecting your final answer."
+This applies only to Math, Physics, Chemistry.
+
+## Optional arguments
+--topics "Math,Chemistry"       # Evaluate specific subjects only
+--n_samples 500                 # Limit evaluation to first 500 questions
+
+## Expected Output
+Running the script prints:
+Overall accuracy
+Per-subject accuracy
+Per-subtopic accuracy
+Model error patterns
+Example:
+Overall Accuracy: 85.76%
+
+Accuracy by Topic:
+ • Math: 68.35%
+ • Chemistry: 83.97%
+ • Biology: 88.98%
+ ...
+Detailed tables and plots are available in:
+results/model_results/
+paper/figures/
+
+## Citing Eval10K
+If you use Eval10K in academic work:
+@misc{eval10k2025,
+  title={Eval10K: A Cross-Disciplinary Benchmark for Evaluating LLM Reasoning},
+  author={Kian Keyhan},
+  year={2025},
+  howpublished={\url{https://github.com/kianaghaiu-art/EVAL10K}}
+}
+
+## License
+This project is released under the MIT License, allowing research and reproduction with attribution.
 
 
 
