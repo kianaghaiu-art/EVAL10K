@@ -1,6 +1,6 @@
 # Eval10K: A Cross-Disciplinary Benchmark for Evaluating LLM Reasoning
 
-Eval10K is a benchmark of 10,278 hand-written multiple-choice questions covering nine high-school and college-level subjects. The dataset is designed to measure both factual accuracy and structured reasoning across STEM and non-STEM domains.
+Eval10K is a benchmark of 10,172 hand-written multiple-choice questions covering nine high-school and college-level subjects. The dataset is designed to measure both factual accuracy and structured reasoning across STEM and non-STEM domains.
 
 This repository includes:
 - The full Eval10K dataset  
